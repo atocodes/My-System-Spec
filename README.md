@@ -1,9 +1,8 @@
 ## My System Spec
-This is a Windows application that retrieves your system specifications and writes them to both JSON and text files.
+This is a Windows application that retrieves your system specifications and Displays.
 
 ### Features
 * Generates detailed system information reports.
-* Saves reports in two formats: JSON and plain text.
 * Easy to use and understand output files.
 
 ### Installation
@@ -20,9 +19,7 @@ git clone https://github.com/atocodes/My-System-Spec.git
 
 ### Usage
 1. Run MSS.exe.
-2. The application will generate system information reports and save them in the same directory as the executable.
-    * SystemSpec.json: Contains the information in JSON format.
-    * SystemSpec.txt: Contains the information in a human-readable text format.
+2. The application will display system information.
 
 ### How it Works
 The application retrieves information about your system using various .NET libraries and then formats it into JSON and text files.

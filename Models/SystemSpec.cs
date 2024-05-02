@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Management;
 using System.IO;
-using Newtonsoft.Json;
 using System.Drawing;
 
 class SystemSpec
@@ -53,7 +52,7 @@ class SystemSpec
         {
             try
             {
-                return JsonConvert.DeserializeObject<Dictionary<string,string>>(File.ReadAllText("appSettings.json"))["id"];
+                return "0";
             }
             catch (FileNotFoundException)
             {
@@ -145,5 +144,4 @@ class SystemSpec
         }
     }
 
-    public static string JsonData() => JsonConvert.SerializeObject(new SystemSpec(),Formatting.Indented);
 }

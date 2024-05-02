@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.IO;
 using System.Diagnostics;
+using MySystemSpec.Windows;
 
 namespace MySystemSpec
 {
@@ -21,9 +22,13 @@ namespace MySystemSpec
     /// </summary>
     public partial class MainWindow : Window
     {
+        Display infoDisplay = new Display();
+
         public MainWindow()
         {
             InitializeComponent();
+            infoDisplay.Show();
+            
         }
 
 
@@ -35,21 +40,21 @@ namespace MySystemSpec
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           btn.Content = "WRITING Data...";
-           string data = SystemSpec.JsonData();
-           string appDir = string.Concat(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),"./RESULT");
+           //btn.Content = "WRITING Data...";
+           //string data = SystemSpec.JsonData();
+           //string appDir = string.Concat(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),"./RESULT");
 
-            try {
-                Directory.CreateDirectory(appDir);
-                File.WriteAllText(string.Concat(appDir, "./RESULT.txt"),data);
-                File.WriteAllText(string.Concat(appDir, "./RESULT.json"), data);
+            //try {
+                //Directory.CreateDirectory(appDir);
+                //File.WriteAllText(string.Concat(appDir, "./RESULT.txt"),data);
+                //File.WriteAllText(string.Concat(appDir, "./RESULT.json"), data);
 
-            } catch(IOException) {
-                btn.Content = "Error!! Try Again";
-            }
+            //} catch(IOException) {
+                //btn.Content = "Error!! Try Again";
+            //}
 
-            btn.Content = "CREATE DATA";
-            Process.Start(appDir);
+            //btn.Content = "CREATE DATA";
+            //Process.Start(appDir);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)=>Close();
